@@ -94,6 +94,7 @@ class PaintGUI:
         self.cnv.delete("all")
         self.draw.rectangle([0,0, 1000, 1000], fill='black')
         self.label.config(text='[  ]')
+        self.flag = 0
 
     def predict_num(self):
         # обработка изображения перед предстказанием
