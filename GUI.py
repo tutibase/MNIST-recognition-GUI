@@ -103,7 +103,7 @@ class PaintGUI:
         # предсказание и вывод результата в label
         lst = clf.predict(resized_end)
         self.label.config(text=lst)
-
+        self.flag = 0
         #resized.save('resized.png')
 
     def brush_plus(self):
