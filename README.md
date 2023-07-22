@@ -17,7 +17,7 @@
 ### img_processing.py
 Функция обработки изображения из окна для рисования. Для работы с изображением используются [Pillow](https://pillow.readthedocs.io/en/stable/), [pandas](https://pandas.pydata.org/) и [NumPy](https://numpy.org/). Функция сжимает изображение, удаляет лишние данные, приводит полученное изображение к размеру 20x20, после чего добавляет рамку шириной 4 пикселя по краям. В итоге получается изображение 28x28, которое успешно обрабатывает модель.
 
-| ![bef_aft_processing](https://github.com/tutibase/MNIST_recognition_GUI/assets/44751053/d188810e-0138-449e-acd6-e26ed9fb1c52) | 
+| ![bfr_aft](https://github.com/tutibase/MNIST_recognition_GUI/assets/44751053/da271178-92ba-4313-9eea-7d27f2032dae) | 
 |:--:| 
 | *Изображение до и после обработки* |
 
