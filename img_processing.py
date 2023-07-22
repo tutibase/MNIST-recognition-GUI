@@ -5,14 +5,14 @@ import pandas as pd
 
 def processing(image):
     # изменение размера изображения и перевод в список
-    resized = image.resize((40, 40))
+    resized = image.resize((140, 140))
     resized_tmp = list(resized.getdata())
     resized_tmp = [i[0] for i in resized_tmp]
     # print(resized_tmp)
 
     # перевод в pd.DF
     resized_tmp = np.asarray(resized_tmp)
-    resized_tmp = resized_tmp.reshape(40, -1)
+    resized_tmp = resized_tmp.reshape(140, -1)
     resized_tmp = pd.DataFrame(data=resized_tmp)
 
     # удаление нулевых строк (горизонтальных линий, где нет белых пикселей)
