@@ -27,7 +27,7 @@ class PaintGUI:
         self.root.title('MNIST GUI')
 
         # параметры кисти для рисования
-        self.brush_width = 6
+        self.brush_width = 12
         self.current_color = '#ffffff'
 
         # создание области для рисования и бинд рисования на нажатие мыши
