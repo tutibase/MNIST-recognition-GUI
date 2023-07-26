@@ -26,6 +26,12 @@ def processing(image):
 
     # перевод в np.array и картинку для изменения размера
     resized_tmp = np.asarray(resized_tmp)
+    
+    max_shape = max(resized_tmp.shape)
+    shape_change0 = max_shape - resized_tmp.shape[0]
+    shape_change1 = max_shape - resized_tmp.shape[1]
+    resized_tmp = np.pad(resized_tmp, ((shape_change0,shape_change0), (shape_change1,shape_change1)), 'constant')
+
     img = PIL.Image.fromarray(resized_tmp)
     img = img.resize((20, 20))
 
@@ -37,9 +43,7 @@ def processing(image):
     resized_tmp[resized_tmp < 0] = 0
 
     # добавление нулей (черных полей) по краям массива (изображения)
-    colsPadding = (4, 4)
-    rowsPadding = (4, 4)
-    resized_tmp = np.pad(resized_tmp, (rowsPadding, colsPadding), 'constant')
+    resized_tmp = np.pad(resized_tmp, (4, 4), 'constant')
 
     resized_tmp = resized_tmp.reshape(1, -1)
 
